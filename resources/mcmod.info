@@ -1,0 +1,16 @@
+[
+{
+  "modid": "mcstats",
+  "name": "Minecraft Stats",
+  "description": "Minecraft Stats Mod.",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["Populo"],
+  "credits": "",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
