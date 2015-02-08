@@ -4,135 +4,199 @@ import net.minecraft.init.Items;
 
 public class MCLists {
 
+	private final MCStats mod;
 	
-	
-	public static void addLeather() {
-		MCStats.leather.add(Items.leather_helmet);
-		MCStats.leather.add(Items.leather_chestplate);
-		MCStats.leather.add(Items.leather_leggings);
-		MCStats.leather.add(Items.leather_boots);
+	public MCLists(MCStats mod) {
+		this.mod = mod;
 	}
 	
-	public static void addChain() {
-		MCStats.chain.add(Items.chainmail_helmet);
-		MCStats.chain.add(Items.chainmail_chestplate);
-		MCStats.chain.add(Items.chainmail_leggings);
-		MCStats.chain.add(Items.chainmail_boots);
+	
+	public void addLeather() {
+		mod.leather.add(Items.leather_helmet);
+		mod.leather.add(Items.leather_chestplate);
+		mod.leather.add(Items.leather_leggings);
+		mod.leather.add(Items.leather_boots);
 	}
 	
-	public static void addIron() {
-		MCStats.iron.add(Items.iron_helmet);
-		MCStats.iron.add(Items.iron_chestplate);
-		MCStats.iron.add(Items.iron_leggings);
-		MCStats.iron.add(Items.iron_boots);
-		MCStats.iron.add(Items.iron_sword);
-		MCStats.iron.add(Items.iron_pickaxe);
-		MCStats.iron.add(Items.iron_axe);
-		MCStats.iron.add(Items.iron_hoe);
-		MCStats.iron.add(Items.iron_shovel);
+	public void addChain() {
+		mod.chain.add(Items.chainmail_helmet);
+		mod.chain.add(Items.chainmail_chestplate);
+		mod.chain.add(Items.chainmail_leggings);
+		mod.chain.add(Items.chainmail_boots);
 	}
 	
-	public static void addGold() {
-		MCStats.gold.add(Items.golden_helmet);
-		MCStats.gold.add(Items.golden_chestplate);
-		MCStats.gold.add(Items.golden_leggings);
-		MCStats.gold.add(Items.golden_boots);
-		MCStats.gold.add(Items.golden_sword);
-		MCStats.gold.add(Items.golden_pickaxe);
-		MCStats.gold.add(Items.golden_axe);
-		MCStats.gold.add(Items.golden_hoe);
-		MCStats.gold.add(Items.golden_shovel);
+	public void addIron() {
+		mod.iron.add(Items.iron_helmet);
+		mod.iron.add(Items.iron_chestplate);
+		mod.iron.add(Items.iron_leggings);
+		mod.iron.add(Items.iron_boots);
+		mod.iron.add(Items.iron_sword);
+		mod.iron.add(Items.iron_pickaxe);
+		mod.iron.add(Items.iron_axe);
+		mod.iron.add(Items.iron_hoe);
+		mod.iron.add(Items.iron_shovel);
+		mod.iron.add(Items.shears);
 	}
 	
-	public static void addDiamond() {
-		MCStats.diamond.add(Items.diamond_helmet);
-		MCStats.diamond.add(Items.diamond_chestplate);
-		MCStats.diamond.add(Items.diamond_leggings);
-		MCStats.diamond.add(Items.diamond_boots);
-		MCStats.diamond.add(Items.diamond_sword);
-		MCStats.diamond.add(Items.diamond_pickaxe);
-		MCStats.diamond.add(Items.diamond_axe);
-		MCStats.diamond.add(Items.diamond_hoe);
-		MCStats.diamond.add(Items.diamond_shovel);
+	public void addGold() {
+		mod.gold.add(Items.golden_helmet);
+		mod.gold.add(Items.golden_chestplate);
+		mod.gold.add(Items.golden_leggings);
+		mod.gold.add(Items.golden_boots);
+		mod.gold.add(Items.golden_sword);
+		mod.gold.add(Items.golden_pickaxe);
+		mod.gold.add(Items.golden_axe);
+		mod.gold.add(Items.golden_hoe);
+		mod.gold.add(Items.golden_shovel);
 	}
 	
-	public static void addWood() {
-		MCStats.wood.add(Items.wooden_sword);
-		MCStats.wood.add(Items.wooden_pickaxe);
-		MCStats.wood.add(Items.wooden_axe);
-		MCStats.wood.add(Items.wooden_hoe);
-		MCStats.wood.add(Items.wooden_shovel);
+	public void addDiamond() {
+		mod.diamond.add(Items.diamond_helmet);
+		mod.diamond.add(Items.diamond_chestplate);
+		mod.diamond.add(Items.diamond_leggings);
+		mod.diamond.add(Items.diamond_boots);
+		mod.diamond.add(Items.diamond_sword);
+		mod.diamond.add(Items.diamond_pickaxe);
+		mod.diamond.add(Items.diamond_axe);
+		mod.diamond.add(Items.diamond_hoe);
+		mod.diamond.add(Items.diamond_shovel);
 	}
 	
-	public static void addStone() {
-		MCStats.stone.add(Items.stone_axe);
-		MCStats.stone.add(Items.stone_hoe);
-		MCStats.stone.add(Items.stone_pickaxe);
-		MCStats.stone.add(Items.stone_shovel);
-		MCStats.stone.add(Items.stone_sword);
+	public void addWood() {
+		mod.wood.add(Items.wooden_sword);
+		mod.wood.add(Items.wooden_pickaxe);
+		mod.wood.add(Items.wooden_axe);
+		mod.wood.add(Items.wooden_hoe);
+		mod.wood.add(Items.wooden_shovel);
 	}
 	
-	public static void addSword() {
-		MCStats.sword.add(Items.diamond_sword);
-		MCStats.sword.add(Items.iron_sword);
-		MCStats.sword.add(Items.wooden_sword);
-		MCStats.sword.add(Items.golden_sword);
-		MCStats.sword.add(Items.stone_sword);
+	public void addStone() {
+		mod.stone.add(Items.stone_axe);
+		mod.stone.add(Items.stone_hoe);
+		mod.stone.add(Items.stone_pickaxe);
+		mod.stone.add(Items.stone_shovel);
+		mod.stone.add(Items.stone_sword);
 	}
 	
-	public static void addHoe() {
-		MCStats.hoe.add(Items.diamond_hoe);
-		MCStats.hoe.add(Items.iron_hoe);
-		MCStats.hoe.add(Items.wooden_hoe);
-		MCStats.hoe.add(Items.golden_hoe);
-		MCStats.hoe.add(Items.stone_hoe);
+	public void addSword() {
+		mod.sword.add(Items.diamond_sword);
+		mod.sword.add(Items.iron_sword);
+		mod.sword.add(Items.wooden_sword);
+		mod.sword.add(Items.golden_sword);
+		mod.sword.add(Items.stone_sword);
 	}
 	
-	public static void addPickaxe() {
-		MCStats.pickaxe.add(Items.diamond_pickaxe);
-		MCStats.pickaxe.add(Items.iron_pickaxe);
-		MCStats.pickaxe.add(Items.wooden_pickaxe);
-		MCStats.pickaxe.add(Items.golden_pickaxe);
-		MCStats.pickaxe.add(Items.stone_pickaxe);
+	public void addHoe() {
+		mod.hoe.add(Items.diamond_hoe);
+		mod.hoe.add(Items.iron_hoe);
+		mod.hoe.add(Items.wooden_hoe);
+		mod.hoe.add(Items.golden_hoe);
+		mod.hoe.add(Items.stone_hoe);
 	}
 	
-	public static void addShovel() {
-		MCStats.shovel.add(Items.diamond_shovel);
-		MCStats.shovel.add(Items.iron_shovel);
-		MCStats.shovel.add(Items.wooden_shovel);
-		MCStats.shovel.add(Items.golden_shovel);
-		MCStats.shovel.add(Items.stone_shovel);
+	public void addPickaxe() {
+		mod.pickaxe.add(Items.diamond_pickaxe);
+		mod.pickaxe.add(Items.iron_pickaxe);
+		mod.pickaxe.add(Items.wooden_pickaxe);
+		mod.pickaxe.add(Items.golden_pickaxe);
+		mod.pickaxe.add(Items.stone_pickaxe);
 	}
 	
-	public static void addHelmet() {
-		MCStats.helmet.add(Items.diamond_helmet);
-		MCStats.helmet.add(Items.iron_helmet);
-		MCStats.helmet.add(Items.leather_helmet);
-		MCStats.helmet.add(Items.golden_helmet);
-		MCStats.helmet.add(Items.chainmail_helmet);
+	public void addShovel() {
+		mod.shovel.add(Items.diamond_shovel);
+		mod.shovel.add(Items.iron_shovel);
+		mod.shovel.add(Items.wooden_shovel);
+		mod.shovel.add(Items.golden_shovel);
+		mod.shovel.add(Items.stone_shovel);
 	}
 	
-	public static void addChestplate() {
-		MCStats.chestplate.add(Items.diamond_chestplate);
-		MCStats.chestplate.add(Items.iron_chestplate);
-		MCStats.chestplate.add(Items.leather_chestplate);
-		MCStats.chestplate.add(Items.golden_chestplate);
-		MCStats.chestplate.add(Items.chainmail_chestplate);
+	public void addAxe() {
+		mod.axe.add(Items.diamond_axe);
+		mod.axe.add(Items.iron_axe);
+		mod.axe.add(Items.wooden_axe);
+		mod.axe.add(Items.golden_axe);
+		mod.axe.add(Items.stone_hoe);
 	}
 	
-	public static void addLeggings() {
-		MCStats.leggings.add(Items.diamond_leggings);
-		MCStats.leggings.add(Items.iron_leggings);
-		MCStats.leggings.add(Items.leather_leggings);
-		MCStats.leggings.add(Items.golden_leggings);
-		MCStats.leggings.add(Items.chainmail_leggings);
+	public void addHelmet() {
+		mod.helmet.add(Items.diamond_helmet);
+		mod.helmet.add(Items.iron_helmet);
+		mod.helmet.add(Items.leather_helmet);
+		mod.helmet.add(Items.golden_helmet);
+		mod.helmet.add(Items.chainmail_helmet);
 	}
 	
-	public static void addBoots() {
-		MCStats.boots.add(Items.diamond_boots);
-		MCStats.boots.add(Items.iron_boots);
-		MCStats.boots.add(Items.leather_boots);
-		MCStats.boots.add(Items.golden_boots);
-		MCStats.boots.add(Items.chainmail_boots);
+	public void addChestplate() {
+		mod.chestplate.add(Items.diamond_chestplate);
+		mod.chestplate.add(Items.iron_chestplate);
+		mod.chestplate.add(Items.leather_chestplate);
+		mod.chestplate.add(Items.golden_chestplate);
+		mod.chestplate.add(Items.chainmail_chestplate);
+	}
+	
+	public void addLeggings() {
+		mod.leggings.add(Items.diamond_leggings);
+		mod.leggings.add(Items.iron_leggings);
+		mod.leggings.add(Items.leather_leggings);
+		mod.leggings.add(Items.golden_leggings);
+		mod.leggings.add(Items.chainmail_leggings);
+	}
+	
+	public void addBoots() {
+		mod.boots.add(Items.diamond_boots);
+		mod.boots.add(Items.iron_boots);
+		mod.boots.add(Items.leather_boots);
+		mod.boots.add(Items.golden_boots);
+		mod.boots.add(Items.chainmail_boots);
+	}
+	/*
+	public void addWoodBlocks() {
+		mod.woodBlock.add(Blocks.log);
+		mod.woodBlock.add(Blocks.log2);
+		mod.woodBlock.add(Blocks.wooden_button);
+		mod.woodBlock.add(Blocks.wooden_door);
+		mod.woodBlock.add(Blocks.wooden_slab);
+		mod.woodBlock.add(Blocks.acacia_stairs);
+		mod.woodBlock.add(Blocks.oak_stairs);
+		mod.woodBlock.add(Blocks.jungle_stairs);
+		mod.woodBlock.add(Blocks.dark_oak_stairs);
+		mod.woodBlock.add(Blocks.birch_stairs);
+		mod.woodBlock.add(Blocks.spruce_stairs);
+		mod.woodBlock.add(Blocks.crafting_table);
+		mod.woodBlock.add(Blocks.bed);
+		mod.woodBlock.add(Blocks.chest);
+	}
+	
+	public void addStoneBlock() {
+		mod.stoneBlock.add(Blocks.stone);
+		mod.stoneBlock.add(Blocks.stone_brick_stairs);
+		mod.stoneBlock.add(Blocks.stone_button);
+		mod.stoneBlock.add(Blocks.stone_pressure_plate);
+		mod.stoneBlock.add(Blocks.stone_stairs);
+		mod.stoneBlock.add(Blocks.stonebrick);
+		mod.stoneBlock.add(Blocks.stone_slab);
+		mod.stoneBlock.add(Blocks.furnace);
+		mod.stoneBlock.add(Blocks.brick_block);
+		mod.stoneBlock.add(Blocks.brick_stairs);
+		mod.stoneBlock.add(Blocks.cobblestone);
+		mod.stoneBlock.add(Blocks.cobblestone_wall);
+		mod.stoneBlock.add(Blocks.obsidian);
+		mod.stoneBlock.add(Blocks.sandstone);
+		mod.stoneBlock.add(Blocks.sandstone_stairs);
+		mod.stoneBlock.add(Blocks.iron_ore);
+		mod.stoneBlock.add(Blocks.iron_block);
+		mod.stoneBlock.add(Blocks.gold_ore);
+		mod.stoneBlock.add(Blocks.gold_block);
+		mod.stoneBlock.add(Blocks.diamond_ore);
+		mod.stoneBlock.add(Blocks.diamond_block);
+		mod.stoneBlock.add(Blocks.coal_ore);
+		mod.stoneBlock.add(Blocks.coal_block);
+		mod.stoneBlock.add(Blocks.emerald_ore);
+		mod.stoneBlock.add(Blocks.emerald_block);
+	}
+	*/
+	public void addString() {
+		mod.string.add(Items.bow);
+		mod.string.add(Items.fishing_rod);
 	}
 }
