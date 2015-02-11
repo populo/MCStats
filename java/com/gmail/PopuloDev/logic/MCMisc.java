@@ -8,11 +8,13 @@ import net.minecraft.util.ChatComponentText;
 import net.minecraft.util.EnumChatFormatting;
 
 import com.gmail.PopuloDev.MCStats;
+import com.gmail.PopuloDev.event.MCEvents;
 
 public class MCMisc {
 
 	static MCStats mod = new MCStats();
 	static Random rand = new Random();
+	private MCEvents e = mod.instance.events;
 	
 	public static boolean isRepairable(Item i) {
 		return isLeather(i) || isIron(i) || isGold(i) || isDiamond(i) || isString(i) || isWood(i) || isStone(i) || isChain(i);
@@ -93,7 +95,7 @@ public class MCMisc {
 	}
 	//repairs
 	
-	public static void repairCurrentItem(float levelAddedRepairFactor) {
+	public void repairCurrentItem(float levelAddedRepairFactor) {
 		//if (levelAddedRepairFactor == 0) levelAddedRepairFactor = (float)Math.sqrt(Stat.getSkillLevel("Repair") / 10);
 		
 		int curDamage = mod.mc.thePlayer.inventory.getCurrentItem().getItemDamage();
@@ -139,7 +141,7 @@ public class MCMisc {
 		else if (isGold(item)) xp = 40;
 		else if (isDiamond(item)) xp = 60;
 		else if (isChain(item)) xp = 80;
-		mod.mc.thePlayer.addChatMessage(new ChatComponentText(EnumChatFormatting.GREEN + string));
+		e.pl.addChatMessage(new ChatComponentText(EnumChatFormatting.GREEN + string));
 		//Stat.addExperience(Stat.REPAIR, xp+repairAmount/5000);
 	}
 }
