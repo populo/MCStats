@@ -10,6 +10,9 @@ public class MCLists {
 		this.mod = mod;
 	}
 	
+	// self explanatory
+	// clears just in case then adds items
+	
 	
 	public void addLeather() {
 		mod.leather.clear();

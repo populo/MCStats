@@ -11,8 +11,10 @@ import com.gmail.PopuloDev.MCStats;
 import com.gmail.PopuloDev.event.MCEvents;
 
 public class MCMisc {
+	
+	// applies arraylists
 
-	static MCStats mod = new MCStats();
+	static MCStats mod = MCStats.instance;
 	static Random rand = new Random();
 	private MCEvents e = mod.instance.events;
 	
@@ -88,6 +90,7 @@ public class MCMisc {
 		return mod.boots.contains(i);
 	}
 	
+	// swimming boost
 	public static float getSwimmingSpeedBoost()	{
 		//float boost = Stat.getSkillLevel("Swimming") / 10 / 60f;
 		//return boost > 0 ? boost : 0;
@@ -95,6 +98,7 @@ public class MCMisc {
 	}
 	//repairs
 	
+	// repairs item lines with Stat.xxx are commented out due to the class not existing yet
 	public void repairCurrentItem(float levelAddedRepairFactor) {
 		//if (levelAddedRepairFactor == 0) levelAddedRepairFactor = (float)Math.sqrt(Stat.getSkillLevel("Repair") / 10);
 		

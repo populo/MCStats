@@ -16,6 +16,7 @@ import cpw.mods.fml.common.gameevent.TickEvent;
 
 public class MCEvents {
 
+	
 	private EntityPlayer p;
 	private MCStats mod = MCStats.instance;
 	private MCMisc misc = new MCMisc();
@@ -26,9 +27,11 @@ public class MCEvents {
 		this.p = e.player;
 		this.pl = p;
 		mod.p = this.p;
+		// used for testing for player variables
 		p.addChatMessage(new ChatComponentText(EnumChatFormatting.AQUA + "Welcome " + p.getDisplayName()));
 	}
 
+	// on key press (works)
 	@SubscribeEvent
 	public void onKey(InputEvent.KeyInputEvent e) {
 		if (MCStats.mc.isSingleplayer()) {

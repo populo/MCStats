@@ -17,7 +17,7 @@ public class MCBus {
 
 	private EntityPlayer p;
 	private MCStats mod = MCStats.instance;
-	private MCMisc misc = new MCMisc();
+	private MCMisc misc = MCStats.instance.misc;
 	private MCEvents e = mod.instance.events;
 	public EntityPlayer pl;
 	
@@ -25,12 +25,18 @@ public class MCBus {
 		this.p = e.pl;
 		this.pl = this.p;
 	}
+	
+	// other events
+	// THESE TWO MUST BE IN THESE CLASSES. FORGE IS WIERD 
 
+	//gets block right clicked
+	// note: DOES NOT GET CORRECT BLOCK. RETURNS NULL AS BLOCK CLICKED
 	@SubscribeEvent
 	public void onBlock(PlayerInteractEvent e) {
 		ItemStack item = e.entityPlayer.inventory.getCurrentItem();
-		Block block = e.world.getBlock((int) e.entityPlayer.getLookVec().xCoord, (int) e.entityPlayer.getLookVec().yCoord, (int) e.entityPlayer.getLookVec().zCoord);
+		Block block = e.entityPlayer.worldObj.getBlock(mod.mc.objectMouseOver.blockX, mod.mc.objectMouseOver.blockY, mod.mc.objectMouseOver.blockZ);
 		EntityPlayer p = e.entityPlayer;
+		if (item.stackSize == 0) return;
 		if (mod.wood.contains(item.getItem())) {
 			System.out.println(block.getLocalizedName());
 			if (block.equals(Blocks.log)) {
@@ -41,6 +47,8 @@ public class MCBus {
 		} else {
 			System.out.println(item.getDisplayName());
 			System.out.println(block.getLocalizedName());
+			
 		}
+		System.out.println(item);
 	}
 }
